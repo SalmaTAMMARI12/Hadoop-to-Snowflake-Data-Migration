@@ -1,0 +1,814 @@
+{
+  "report_metadata": {
+    "project": "Migration HDP -> Snowflake | Olist Dataset", 
+    "total_tables_failed": 0, 
+    "total_tables_profiled": 9, 
+    "author": "Salma - Data Engineer", 
+    "phase": "Phase 1 - Lift & Inventaire Source", 
+    "generated_at": "2026-04-22T15:15:17.714475", 
+    "sprint": "Sprint 2", 
+    "standard": "IBM LAMV-inspired"
+  }, 
+  "salting_candidates": [], 
+  "tables": [
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:13:56.680085", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "customer_id", 
+          "dtype": "StringType", 
+          "distinct_count": 102585, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "customer_unique_id", 
+          "dtype": "StringType", 
+          "distinct_count": 103785, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "customer_zip_code_prefix", 
+          "dtype": "StringType", 
+          "distinct_count": 15475, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "customer_city", 
+          "dtype": "StringType", 
+          "distinct_count": 4211, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "customer_state", 
+          "dtype": "StringType", 
+          "distinct_count": 27, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }
+      ], 
+      "duration_seconds": 27.51, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "customers_orc", 
+      "integrity": {
+        "checksum_standard": " MD5 over full table rows", 
+        "checksum_md5": "8f31748be771b26741e229da1212c23a"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 0, 
+        "overall_completeness_pct": 100.0, 
+        "total_columns": 5, 
+        "quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 5, 
+        "total_rows": 99441, 
+        "schema": {
+          "customer_unique_id": "StringType", 
+          "customer_zip_code_prefix": "StringType", 
+          "customer_id": "StringType", 
+          "customer_state": "StringType", 
+          "customer_city": "StringType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:14:24.189497", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "geolocation_zip_code_prefix", 
+          "dtype": "StringType", 
+          "distinct_count": 19855, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "geolocation_lat", 
+          "dtype": "DoubleType", 
+          "distinct_count": 702768, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "geolocation_lng", 
+          "dtype": "DoubleType", 
+          "distinct_count": 708458, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "geolocation_city", 
+          "dtype": "StringType", 
+          "distinct_count": 8324, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "geolocation_state", 
+          "dtype": "StringType", 
+          "distinct_count": 27, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }
+      ], 
+      "duration_seconds": 28.7, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "geolocation_orc", 
+      "integrity": {
+        "checksum_standard": "IBM-style MD5 over full table rows", 
+        "checksum_md5": "229e358e9b946478ac55cbd80a1d4ea5"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 0, 
+        "overall_completeness_pct": 100.0, 
+        "total_columns": 5, 
+        "quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 5, 
+        "total_rows": 1000163, 
+        "schema": {
+          "geolocation_lng": "DoubleType", 
+          "geolocation_city": "StringType", 
+          "geolocation_state": "StringType", 
+          "geolocation_zip_code_prefix": "StringType", 
+          "geolocation_lat": "DoubleType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:14:52.890827", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_id", 
+          "dtype": "StringType", 
+          "distinct_count": 99770, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_item_id", 
+          "dtype": "IntegerType", 
+          "distinct_count": 21, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "product_id", 
+          "dtype": "StringType", 
+          "distinct_count": 32938, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "seller_id", 
+          "dtype": "StringType", 
+          "distinct_count": 3080, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "shipping_limit_date", 
+          "dtype": "StringType", 
+          "distinct_count": 91195, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "price", 
+          "dtype": "DoubleType", 
+          "distinct_count": 5988, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "freight_value", 
+          "dtype": "DoubleType", 
+          "distinct_count": 7026, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }
+      ], 
+      "duration_seconds": 3.62, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "order_items_orc", 
+      "integrity": {
+        "checksum_standard": " MD5 over full table rows", 
+        "checksum_md5": "d5682ffc552b89de411dc7c9273132c1"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 0, 
+        "overall_completeness_pct": 100.0, 
+        "total_columns": 7, 
+        "quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 7, 
+        "total_rows": 112650, 
+        "schema": {
+          "seller_id": "StringType", 
+          "product_id": "StringType", 
+          "order_id": "StringType", 
+          "price": "DoubleType", 
+          "shipping_limit_date": "StringType", 
+          "freight_value": "DoubleType", 
+          "order_item_id": "IntegerType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:14:56.507320", 
+      "column_statistics": [
+        {
+          "completeness_pct": 96.2003, 
+          "quality_flag": "OK", 
+          "column": "review_id", 
+          "dtype": "StringType", 
+          "distinct_count": 94622, 
+          "null_count": 3979, 
+          "null_pct": 3.7997
+        }, 
+        {
+          "completeness_pct": 95.0381, 
+          "quality_flag": "OK", 
+          "column": "order_id", 
+          "dtype": "StringType", 
+          "distinct_count": 99309, 
+          "null_count": 5196, 
+          "null_pct": 4.9619
+        }, 
+        {
+          "completeness_pct": 94.7555, 
+          "quality_flag": "OK", 
+          "column": "review_score", 
+          "dtype": "IntegerType", 
+          "distinct_count": 7, 
+          "null_count": 5492, 
+          "null_pct": 5.2445
+        }, 
+        {
+          "completeness_pct": 94.7689, 
+          "quality_flag": "OK", 
+          "column": "review_comment_title", 
+          "dtype": "StringType", 
+          "distinct_count": 4669, 
+          "null_count": 5478, 
+          "null_pct": 5.2311
+        }, 
+        {
+          "completeness_pct": 91.0771, 
+          "quality_flag": "OK", 
+          "column": "review_comment_message", 
+          "dtype": "StringType", 
+          "distinct_count": 32534, 
+          "null_count": 9344, 
+          "null_pct": 8.9229
+        }, 
+        {
+          "completeness_pct": 91.0742, 
+          "quality_flag": "OK", 
+          "column": "review_creation_date", 
+          "dtype": "StringType", 
+          "distinct_count": 592, 
+          "null_count": 9347, 
+          "null_pct": 8.9258
+        }, 
+        {
+          "completeness_pct": 91.0733, 
+          "quality_flag": "OK", 
+          "column": "review_answer_timestamp", 
+          "dtype": "StringType", 
+          "distinct_count": 98707, 
+          "null_count": 9348, 
+          "null_pct": 8.9267
+        }
+      ], 
+      "duration_seconds": 4.33, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "order_reviews_orc", 
+      "integrity": {
+        "checksum_standard": " MD5 over full table rows", 
+        "checksum_md5": "78644a88f9b16e46a7736116c842e71d"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 7, 
+        "overall_completeness_pct": 93.43, 
+        "total_columns": 7, 
+        "ibm_quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 7, 
+        "total_rows": 104719, 
+        "schema": {
+          "review_comment_message": "StringType", 
+          "review_id": "StringType", 
+          "order_id": "StringType", 
+          "review_answer_timestamp": "StringType", 
+          "review_creation_date": "StringType", 
+          "review_comment_title": "StringType", 
+          "review_score": "IntegerType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:15:00.835955", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_id", 
+          "dtype": "StringType", 
+          "distinct_count": 99770, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "customer_id", 
+          "dtype": "StringType", 
+          "distinct_count": 102585, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_status", 
+          "dtype": "StringType", 
+          "distinct_count": 8, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_purchase_timestamp", 
+          "dtype": "StringType", 
+          "distinct_count": 94718, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_approved_at", 
+          "dtype": "StringType", 
+          "distinct_count": 85174, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_delivered_carrier_date", 
+          "dtype": "StringType", 
+          "distinct_count": 79259, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_delivered_customer_date", 
+          "dtype": "StringType", 
+          "distinct_count": 97053, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_estimated_delivery_date", 
+          "dtype": "StringType", 
+          "distinct_count": 454, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }
+      ], 
+      "duration_seconds": 8.49, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "orders_orc", 
+      "integrity": {
+        "checksum_standard": "IBM-style MD5 over full table rows", 
+        "checksum_md5": "1c9fbdb2b883eca008cfed220157ee71"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 0, 
+        "overall_completeness_pct": 100.0, 
+        "total_columns": 8, 
+        "quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 8, 
+        "total_rows": 99441, 
+        "schema": {
+          "order_estimated_delivery_date": "StringType", 
+          "order_id": "StringType", 
+          "order_delivered_carrier_date": "StringType", 
+          "order_approved_at": "StringType", 
+          "order_purchase_timestamp": "StringType", 
+          "order_status": "StringType", 
+          "customer_id": "StringType", 
+          "order_delivered_customer_date": "StringType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:15:09.321456", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "order_id", 
+          "dtype": "StringType", 
+          "distinct_count": 99770, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "payment_sequential", 
+          "dtype": "IntegerType", 
+          "distinct_count": 30, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "payment_type", 
+          "dtype": "StringType", 
+          "distinct_count": 5, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "payment_installments", 
+          "dtype": "IntegerType", 
+          "distinct_count": 25, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "payment_value", 
+          "dtype": "DoubleType", 
+          "distinct_count": 26607, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }
+      ], 
+      "duration_seconds": 2.79, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "payments_orc", 
+      "integrity": {
+        "checksum_standard": "IBM-style MD5 over full table rows", 
+        "checksum_md5": "e2e840f9f44d52991be9650b12c56f0b"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 0, 
+        "overall_completeness_pct": 100.0, 
+        "total_columns": 5, 
+        "quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 5, 
+        "total_rows": 103886, 
+        "schema": {
+          "order_id": "StringType", 
+          "payment_value": "DoubleType", 
+          "payment_type": "StringType", 
+          "payment_sequential": "IntegerType", 
+          "payment_installments": "IntegerType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:15:12.109154", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "product_id", 
+          "dtype": "StringType", 
+          "distinct_count": 32938, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "product_category_name", 
+          "dtype": "StringType", 
+          "distinct_count": 70, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 98.1488, 
+          "quality_flag": "OK", 
+          "column": "product_name_lenght", 
+          "dtype": "IntegerType", 
+          "distinct_count": 66, 
+          "null_count": 610, 
+          "null_pct": 1.8512
+        }, 
+        {
+          "completeness_pct": 98.1488, 
+          "quality_flag": "OK", 
+          "column": "product_description_lenght", 
+          "dtype": "IntegerType", 
+          "distinct_count": 2946, 
+          "null_count": 610, 
+          "null_pct": 1.8512
+        }, 
+        {
+          "completeness_pct": 98.1488, 
+          "quality_flag": "OK", 
+          "column": "product_photos_qty", 
+          "dtype": "IntegerType", 
+          "distinct_count": 19, 
+          "null_count": 610, 
+          "null_pct": 1.8512
+        }, 
+        {
+          "completeness_pct": 99.9939, 
+          "quality_flag": "OK", 
+          "column": "product_weight_g", 
+          "dtype": "IntegerType", 
+          "distinct_count": 2253, 
+          "null_count": 2, 
+          "null_pct": 0.0061
+        }, 
+        {
+          "completeness_pct": 99.9939, 
+          "quality_flag": "OK", 
+          "column": "product_length_cm", 
+          "dtype": "IntegerType", 
+          "distinct_count": 99, 
+          "null_count": 2, 
+          "null_pct": 0.0061
+        }, 
+        {
+          "completeness_pct": 99.9939, 
+          "quality_flag": "OK", 
+          "column": "product_height_cm", 
+          "dtype": "IntegerType", 
+          "distinct_count": 103, 
+          "null_count": 2, 
+          "null_pct": 0.0061
+        }, 
+        {
+          "completeness_pct": 99.9939, 
+          "quality_flag": "OK", 
+          "column": "product_width_cm", 
+          "dtype": "IntegerType", 
+          "distinct_count": 94, 
+          "null_count": 2, 
+          "null_pct": 0.0061
+        }
+      ], 
+      "duration_seconds": 2.55, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "products_orc", 
+      "integrity": {
+        "checksum_standard": " MD5 over full table rows", 
+        "checksum_md5": "c7ebb0fc12d00779d50b6817bf5a8f28"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 7, 
+        "overall_completeness_pct": 99.38, 
+        "total_columns": 9, 
+        "quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 9, 
+        "total_rows": 32951, 
+        "schema": {
+          "product_photos_qty": "IntegerType", 
+          "product_height_cm": "IntegerType", 
+          "product_name_lenght": "IntegerType", 
+          "product_id": "StringType", 
+          "product_description_lenght": "IntegerType", 
+          "product_length_cm": "IntegerType", 
+          "product_width_cm": "IntegerType", 
+          "product_category_name": "StringType", 
+          "product_weight_g": "IntegerType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:15:14.656619", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "seller_id", 
+          "dtype": "StringType", 
+          "distinct_count": 3080, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "seller_zip_code_prefix", 
+          "dtype": "StringType", 
+          "distinct_count": 2123, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "seller_city", 
+          "dtype": "StringType", 
+          "distinct_count": 618, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "seller_state", 
+          "dtype": "StringType", 
+          "distinct_count": 24, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }
+      ], 
+      "duration_seconds": 1.61, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "sellers_orc", 
+      "integrity": {
+        "checksum_standard": "IBM-style MD5 over full table rows", 
+        "checksum_md5": "f064309f66190f5fea4149146e79d68f"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 0, 
+        "overall_completeness_pct": 100.0, 
+        "total_columns": 4, 
+        "quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 4, 
+        "total_rows": 3095, 
+        "schema": {
+          "seller_id": "StringType", 
+          "seller_zip_code_prefix": "StringType", 
+          "seller_city": "StringType", 
+          "seller_state": "StringType"
+        }
+      }
+    }, 
+    {
+      "status": "OK", 
+      "profiled_at": "2026-04-22T15:15:16.266098", 
+      "column_statistics": [
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "OK", 
+          "column": "product_category_name", 
+          "dtype": "StringType", 
+          "distinct_count": 67, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }, 
+        {
+          "completeness_pct": 100.0, 
+          "quality_flag": "INFO - potentielle cl\u00e9 unique", 
+          "column": "product_category_name_english", 
+          "dtype": "StringType", 
+          "distinct_count": 71, 
+          "null_count": 0, 
+          "null_pct": 0.0
+        }
+      ], 
+      "duration_seconds": 1.45, 
+      "salting_analysis": {
+        "requires_salting": false, 
+        "reason": "Volume nominal", 
+        "recommended_n_salts": null, 
+        "recommended_partition_cols": []
+      }, 
+      "table": "category_translation_orc", 
+      "integrity": {
+        "checksum_standard": "IBM-style MD5 over full table rows", 
+        "checksum_md5": "48114b0cf273bd9dfde956e0ff241fe7"
+      }, 
+      "quality_summary": {
+        "critical_null_columns": 0, 
+        "columns_with_nulls": 0, 
+        "overall_completeness_pct": 100.0, 
+        "total_columns": 2, 
+        "ibm_quality_gate": "PASS"
+      }, 
+      "metadata": {
+        "total_columns": 2, 
+        "total_rows": 71, 
+        "schema": {
+          "product_category_name_english": "StringType", 
+          "product_category_name": "StringType"
+        }
+      }
+    }
+  ]
+}

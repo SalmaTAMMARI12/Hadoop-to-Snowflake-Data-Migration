@@ -1,0 +1,47 @@
+{
+  "customers_ready": {
+    "row_count": 99441, 
+    "checksum_md5": "74344eddf46a95fd1a188806df711ccb", 
+    "export_path": "/user/student/olist_migration/customers_ready"
+  }, 
+  "order_reviews_ready": {
+    "row_count": 104719, 
+    "checksum_md5": "25105f3f8f459e7ee897e214e6db61e2", 
+    "export_path": "/user/student/olist_migration/order_reviews_ready"
+  }, 
+  "products_ready": {
+    "row_count": 32951, 
+    "checksum_md5": "2af6e73ba0db4ea04e0cf24f7f9bde3d", 
+    "export_path": "/user/student/olist_migration/products_ready"
+  }, 
+  "category_translation_ready": {
+    "row_count": 71, 
+    "checksum_md5": "1427387a809cdecac27a1063bde95d0f", 
+    "export_path": "/user/student/olist_migration/category_translation_ready"
+  }, 
+  "payments_ready": {
+    "row_count": 103886, 
+    "checksum_md5": "2bb42503ff5f7377878dc663d77ed165", 
+    "export_path": "/user/student/olist_migration/payments_ready"
+  }, 
+  "geolocation_ready": {
+    "row_count": 1000163, 
+    "checksum_md5": "9d4f29392c55b8ff31f705e875a86007", 
+    "export_path": "/user/student/olist_migration/geolocation_ready"
+  }, 
+  "sellers_ready": {
+    "row_count": 3095, 
+    "checksum_md5": "39296ec0e0324570a3759435da8c2d17", 
+    "export_path": "/user/student/olist_migration/sellers_ready"
+  }, 
+  "orders_ready": {
+    "row_count": 99441, 
+    "checksum_md5": "ab94e167ec3224101a03c5f999d46d50", 
+    "export_path": "/user/student/olist_migration/orders_ready"
+  }, 
+  "order_items_ready": {
+    "row_count": 112650, 
+    "checksum_md5": "0053ab9f698a8a0926606c6a2935d63b", 
+    "export_path": "/user/student/olist_migration/order_items_ready"
+  }
+}
