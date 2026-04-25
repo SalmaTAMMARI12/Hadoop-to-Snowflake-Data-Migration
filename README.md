@@ -61,23 +61,6 @@ Validation is performed by executing equivalent queries on both environments and
 
 ---
 
-## Project Structure
-
-assets/
-├── 01_data_ingestion/
-├── 02_transformation/
-├── 03_migration/
-├── 04_validation/
-├── 05_data_quality/
-├── 06_audit/
-
-src/
-├── loading/
-├── transformations/
-├── profiling/
-├── quality/
-
----
 
 ## Technologies Used
 
