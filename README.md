@@ -27,6 +27,7 @@ The pipeline follows a structured data lifecycle:
    - Distinct value checks  
    - Aggregation validation  
    - MD5 checksum (global table integrity)
+   ![alt text](image.png)
 
 ---
 
